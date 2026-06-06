@@ -1,0 +1,19 @@
+global:
+  scrape_interval: 15s       # coleta métricas a cada 15 segundos
+  evaluation_interval: 15s   # avalia regras de alerta a cada 15 segundos
+
+scrape_configs:
+
+  # Prometheus monitora a si mesmo
+  - job_name: "prometheus"
+    static_configs:
+      - targets: ["localhost:9090"]
+
+  # Node Exporter: métricas do servidor host
+  - job_name: "node-exporter"
+    static_configs:
+      - targets: ["node-exporter:9100"]
+    relabel_configs:
+      - source_labels: [__address__]
+        target_label: instance
+        replacement: "servidor-linux"
