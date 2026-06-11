@@ -128,3 +128,5 @@ docker compose down -v
 3. TANENBAUM, A. S.; WETHERALL, D. *Redes de Computadores*. 5. ed. Pearson, 2011.
 4. IEEE Std 802.3-2022 — *IEEE Standard for Ethernet*.
 5. TURNBULL, J. *The Art of Monitoring*. Turnbull Press, 2016.
+
+[Example Dashboard](https://grafana.crespo.cloud/public-dashboards/f9c1e2f5fec3471b8de5490599f3c727)
